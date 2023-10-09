@@ -1,0 +1,147 @@
+/*
+seletor{
+    propriedade: valor;
+}
+*/
+
+/*
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+body{
+    margin: 0;    
+    font-family: 'Roboto', sans-serif;    
+}
+
+h1{
+    font-size: 64px; /*tamanho da fonte*/
+    color: #003366; /*cor do texto*/    
+    margin: 0;                
+}
+
+h2{
+    font-size: 32px;
+    color: #333333;
+    margin: 0;
+}
+
+p{
+    font-size: 20px;
+    color: #666666;
+}
+
+ul{
+    margin: 0;    
+}
+
+.container{
+    display: flex;
+    align-items:center; /*alinhamento no eixo*/        
+}
+
+.sidebar{
+    background-color: #003366; 
+    width: 280px; /*largura*/
+    height: 100vh; /*altura -> (vh) view height -> unidade baseada no navegador*/
+    text-align: center;
+    
+    display: flex;
+    align-items: center; /*y*/
+    justify-content: center; /*x*/        
+}
+
+.perfil{
+    border-radius: 50%;
+}
+
+/*Formatando a lista que estiver dentro do sidebar*/
+.sidebar ul{
+    list-style-type: none; /*retira o marcador da lista*/
+    padding: 0;               
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+.sidebar li{
+    margin-bottom: 30px;
+}
+
+/*Formatando os links que estiverem dentro da <ul> dentro da sidebar*/
+.sidebar ul a{
+    color: #ffffff;
+    text-decoration: none; /*retira o sublinhado dos links*/
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+.sidebar ul a:hover{
+    color: yellow;
+}
+
+.midias a{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.content{
+    width: 986px;
+    margin-left: 50px;      
+    
+}
+
+
+/*Para telas de até 1279px*/
+/*Media Queries.,*/
+@media (max-width: 1279px){
+
+    h1{
+        font-size: 32px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .content{
+        width: 60%;
+        margin-left: 25px;
+    }
+
+    .sidebar{
+        width: 25%;
+    }
+
+    .sidebar ul a{
+        font-size: 16px;
+    }
+
+    .perfil{
+        width: 80px;
+    }
+
+    .midias a{
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .midias img{
+        width: 25px;
+    }
+}
+
+@media (max-width: 450px){
+
+    .sidebar{
+        width: 30%;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+}
